@@ -43,7 +43,7 @@ class DetailFragment : Fragment() {
 
         val binding = FragmentDetailBinding.inflate(inflater)
         binding.viewModel = viewModel
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
         return binding.root
     }
 }
