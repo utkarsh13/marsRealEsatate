@@ -73,7 +73,7 @@ class OverviewViewModel : ViewModel() {
      */
     private fun getMarsRealEstateProperties(filter: MarsApiFilter) {
         coroutineScope.launch {
-            val getPropertiesDeferred = MarsApi.retrofitService.getProperties(filter.value)
+            val getPropertiesDeferred = MarsApi.retrofitService.getPropertiesAsync(filter.value)
 
             try {
                 _status.value = MarsApiStatus.LOADING
